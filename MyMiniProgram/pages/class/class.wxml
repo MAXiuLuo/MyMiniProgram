@@ -1,0 +1,25 @@
+<!--pages/class/class.wxml-->
+<scroll-view class='left' scroll-y>
+  <view class="leftlist {{index==_click?'yes':''}}" data-i="{{index}}"  wx:for="{{left}}" wx:key="{{item.id}}" bindtap="tap">
+    {{item.txt}}
+  </view>
+</scroll-view>
+
+<scroll-view class='right' scroll-y="true">
+  <view wx:for="{{right}}" wx:key="{{item.id}}">
+
+    <view class='title'>
+      <text class='line'></text>
+      <text>{{item.txt}}</text>
+      <text class='line'></text>
+    </view>
+
+    <view class='li' wx:for="{{item.li}}" wx:key="{{item.name}}">
+      <navigator>
+        <image src='{{item.src}}'></image>
+        <text class='name'>{{item.name}}</text>
+      </navigator>
+    </view>
+
+  </view>
+</scroll-view>

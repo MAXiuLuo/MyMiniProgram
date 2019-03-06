@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <!-- <input placeholder='用户名' class="fome-userinfo  usermotto"></input>
+  <input placeholder='密码'  password='true' class="fome-userinfo"></input>
+  <view class='btn'>
+    <navigator class='b' url='../navigatorpage/navigatorpage'>
+      <button type='primary'>登录</button>
+    </navigator>
+
+    <navigator class='b' url='../navigatorpage/navigatorpage'>
+        <button>注册</button>
+    </navigator>
+  </view> -->
+
+  <!-- 
+  <video
+    id="myVideo"
+    src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    enable-danmu
+    danmu-btn
+    controls
+  ></video> -->
+
+
+  <!-- <ul>
+    <navigator class='items' wx:for="{{item}}" wx:key="{{item.id}}" url='{{item.link}}'>
+      <image src='{{item.url}}'></image>
+      <text>{{item.title}}</text>
+    </navigator>
+  </ul> -->
+
+</view>
